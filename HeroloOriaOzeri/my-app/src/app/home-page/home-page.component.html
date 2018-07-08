@@ -1,0 +1,15 @@
+<section id="team" class="pb-5">
+  <div class="container">
+    <h5 class="section-title h1">OUR BOOKS</h5>
+    <herolo-add-book (emitter)="addBook($event)"> </herolo-add-book>
+
+    <div class="row">
+      <div *ngFor="let b of books" class="col-xs-12 col-sm-6 col-md-4">
+        <b class="title"></b>
+        <herolo-book-details [book]="b" (emitter)="deleteBookByID($event)"> </herolo-book-details>
+      </div>
+    </div>
+
+    <a class="back-to-top" (click)="top()">^</a>
+  </div>
+</section>
